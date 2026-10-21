@@ -1,0 +1,82 @@
+[
+  {
+    "view": "phone",
+    "width": 390,
+    "height": 1477,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "source": "board.svg"
+      }
+    ],
+    "applied": "Board generated: Balanced",
+    "selection": "Balanced",
+    "notice": false,
+    "scripts": 0,
+    "errors": []
+  },
+  {
+    "view": "phone-pending",
+    "width": 390,
+    "height": 1549,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "source": "board.svg"
+      }
+    ],
+    "applied": "Board generated: Balanced",
+    "selection": "Strong balance",
+    "notice": true,
+    "scripts": 0,
+    "errors": []
+  },
+  {
+    "view": "desktop",
+    "width": 1280,
+    "height": 1242,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "source": "board.svg"
+      }
+    ],
+    "applied": "Board generated: Balanced",
+    "selection": "Balanced",
+    "notice": false,
+    "scripts": 0,
+    "errors": []
+  },
+  {
+    "view": "desktop-pending",
+    "width": 1280,
+    "height": 1242,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "source": "board.svg"
+      }
+    ],
+    "applied": "Board generated: Balanced",
+    "selection": "Strong balance",
+    "notice": true,
+    "scripts": 0,
+    "errors": []
+  },
+  {
+    "layout_check_width": 360,
+    "overflow": false
+  },
+  {
+    "layout_check_width": 768,
+    "overflow": false
+  },
+  {
+    "layout_check_width": 1024,
+    "overflow": false
+  }
+]

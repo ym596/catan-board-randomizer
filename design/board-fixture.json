@@ -1,0 +1,387 @@
+{
+  "description": "Static layout fixture, validated against default Balanced hard rules; no calibrated score claimed.",
+  "frame_mapping": {
+    "version": "sixth-edition-fixed-v1",
+    "file": "frame-mapping.json",
+    "status": "Rulebook-checked schematic topology; physical die-cut dimensions not represented."
+  },
+  "tiles": [
+    {
+      "q": 0,
+      "r": -2,
+      "resource": "Wheat",
+      "number": 3
+    },
+    {
+      "q": 1,
+      "r": -2,
+      "resource": "Ore",
+      "number": 8
+    },
+    {
+      "q": 2,
+      "r": -2,
+      "resource": "Wood",
+      "number": 9
+    },
+    {
+      "q": -1,
+      "r": -1,
+      "resource": "Wood",
+      "number": 10
+    },
+    {
+      "q": 0,
+      "r": -1,
+      "resource": "Ore",
+      "number": 12
+    },
+    {
+      "q": 1,
+      "r": -1,
+      "resource": "Desert",
+      "number": null
+    },
+    {
+      "q": 2,
+      "r": -1,
+      "resource": "Wood",
+      "number": 6
+    },
+    {
+      "q": -2,
+      "r": 0,
+      "resource": "Brick",
+      "number": 8
+    },
+    {
+      "q": -1,
+      "r": 0,
+      "resource": "Wood",
+      "number": 4
+    },
+    {
+      "q": 0,
+      "r": 0,
+      "resource": "Ore",
+      "number": 9
+    },
+    {
+      "q": 1,
+      "r": 0,
+      "resource": "Wheat",
+      "number": 5
+    },
+    {
+      "q": 2,
+      "r": 0,
+      "resource": "Brick",
+      "number": 2
+    },
+    {
+      "q": -2,
+      "r": 1,
+      "resource": "Wool",
+      "number": 11
+    },
+    {
+      "q": -1,
+      "r": 1,
+      "resource": "Wool",
+      "number": 5
+    },
+    {
+      "q": 0,
+      "r": 1,
+      "resource": "Wool",
+      "number": 11
+    },
+    {
+      "q": 1,
+      "r": 1,
+      "resource": "Wheat",
+      "number": 4
+    },
+    {
+      "q": -2,
+      "r": 2,
+      "resource": "Brick",
+      "number": 6
+    },
+    {
+      "q": -1,
+      "r": 2,
+      "resource": "Wheat",
+      "number": 3
+    },
+    {
+      "q": 0,
+      "r": 2,
+      "resource": "Wool",
+      "number": 10
+    }
+  ],
+  "production_dots": {
+    "Wood": 15,
+    "Wheat": 11,
+    "Wool": 11,
+    "Brick": 11,
+    "Ore": 10
+  },
+  "applied_level": "Balanced",
+  "visual_revision": "Resource names moved to shared legend; matching terrain/port symbols; explicit coastal corners and wooden piers.",
+  "ports": [
+    {
+      "frame_ends": [
+        1,
+        2
+      ],
+      "resource": "Generic",
+      "ratio": "3:1",
+      "local_coastal_edge": 2,
+      "coastal_edge": 2,
+      "coastal_vertex_indices": [
+        2,
+        3
+      ],
+      "coastal_vertices": [
+        [
+          381.635861,
+          288.0
+        ],
+        [
+          381.635861,
+          326.0
+        ]
+      ],
+      "badge_center": [
+        410.636,
+        307.0
+      ]
+    },
+    {
+      "frame_ends": [
+        2,
+        3
+      ],
+      "resource": "Generic",
+      "ratio": "3:1",
+      "local_coastal_edge": 0,
+      "coastal_edge": 5,
+      "coastal_vertex_indices": [
+        5,
+        6
+      ],
+      "coastal_vertices": [
+        [
+          348.726896,
+          383.0
+        ],
+        [
+          315.817931,
+          402.0
+        ]
+      ],
+      "badge_center": [
+        346.772,
+        417.615
+      ]
+    },
+    {
+      "frame_ends": [
+        2,
+        3
+      ],
+      "resource": "Brick",
+      "ratio": "2:1",
+      "local_coastal_edge": 3,
+      "coastal_edge": 8,
+      "coastal_vertex_indices": [
+        8,
+        9
+      ],
+      "coastal_vertices": [
+        [
+          250.0,
+          402.0
+        ],
+        [
+          217.091035,
+          383.0
+        ]
+      ],
+      "badge_center": [
+        219.046,
+        417.615
+      ]
+    },
+    {
+      "frame_ends": [
+        3,
+        4
+      ],
+      "resource": "Wood",
+      "ratio": "2:1",
+      "local_coastal_edge": 2,
+      "coastal_edge": 12,
+      "coastal_vertex_indices": [
+        12,
+        13
+      ],
+      "coastal_vertices": [
+        [
+          151.273104,
+          345.0
+        ],
+        [
+          118.364139,
+          326.0
+        ]
+      ],
+      "badge_center": [
+        120.319,
+        360.615
+      ]
+    },
+    {
+      "frame_ends": [
+        4,
+        5
+      ],
+      "resource": "Generic",
+      "ratio": "3:1",
+      "local_coastal_edge": 0,
+      "coastal_edge": 15,
+      "coastal_vertex_indices": [
+        15,
+        16
+      ],
+      "coastal_vertices": [
+        [
+          85.455173,
+          269.0
+        ],
+        [
+          85.455173,
+          231.0
+        ]
+      ],
+      "badge_center": [
+        56.455,
+        250.0
+      ]
+    },
+    {
+      "frame_ends": [
+        4,
+        5
+      ],
+      "resource": "Wheat",
+      "ratio": "2:1",
+      "local_coastal_edge": 3,
+      "coastal_edge": 18,
+      "coastal_vertex_indices": [
+        18,
+        19
+      ],
+      "coastal_vertices": [
+        [
+          118.364139,
+          174.0
+        ],
+        [
+          151.273104,
+          155.0
+        ]
+      ],
+      "badge_center": [
+        120.319,
+        139.385
+      ]
+    },
+    {
+      "frame_ends": [
+        5,
+        6
+      ],
+      "resource": "Ore",
+      "ratio": "2:1",
+      "local_coastal_edge": 2,
+      "coastal_edge": 22,
+      "coastal_vertex_indices": [
+        22,
+        23
+      ],
+      "coastal_vertices": [
+        [
+          217.091035,
+          117.0
+        ],
+        [
+          250.0,
+          98.0
+        ]
+      ],
+      "badge_center": [
+        219.046,
+        82.385
+      ]
+    },
+    {
+      "frame_ends": [
+        6,
+        1
+      ],
+      "resource": "Generic",
+      "ratio": "3:1",
+      "local_coastal_edge": 0,
+      "coastal_edge": 25,
+      "coastal_vertex_indices": [
+        25,
+        26
+      ],
+      "coastal_vertices": [
+        [
+          315.817931,
+          98.0
+        ],
+        [
+          348.726896,
+          117.0
+        ]
+      ],
+      "badge_center": [
+        346.772,
+        82.385
+      ]
+    },
+    {
+      "frame_ends": [
+        6,
+        1
+      ],
+      "resource": "Wool",
+      "ratio": "2:1",
+      "local_coastal_edge": 3,
+      "coastal_edge": 28,
+      "coastal_vertex_indices": [
+        28,
+        29
+      ],
+      "coastal_vertices": [
+        [
+          381.635861,
+          174.0
+        ],
+        [
+          381.635861,
+          212.0
+        ]
+      ],
+      "badge_center": [
+        410.636,
+        193.0
+      ]
+    }
+  ]
+}

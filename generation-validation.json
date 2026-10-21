@@ -1,0 +1,61 @@
+{
+  "scope": "Node on this development Mac; not a mobile/browser benchmark",
+  "samplesPerLevel": 1000,
+  "results": [
+    {
+      "level": 1,
+      "boards": 1000,
+      "failures": 0,
+      "violations": 0,
+      "distinct": 1000,
+      "medianPenalty": 0.47493,
+      "p90Penalty": 0.7159975000000001,
+      "medianMs": 0.05100000000000193,
+      "p95Ms": 0.13349999999999795
+    },
+    {
+      "level": 2,
+      "boards": 1000,
+      "failures": 0,
+      "violations": 0,
+      "distinct": 1000,
+      "medianPenalty": 0.35647875000000007,
+      "p90Penalty": 0.49581374999999994,
+      "medianMs": 0.11879200000001333,
+      "p95Ms": 0.1840829999999869
+    },
+    {
+      "level": 3,
+      "boards": 1000,
+      "failures": 0,
+      "violations": 0,
+      "distinct": 1000,
+      "medianPenalty": 0.22706375,
+      "p90Penalty": 0.30269375,
+      "medianMs": 1.2611249999999927,
+      "p95Ms": 1.8150419999999485
+    },
+    {
+      "level": 4,
+      "boards": 1000,
+      "failures": 0,
+      "violations": 0,
+      "distinct": 1000,
+      "medianPenalty": 0.14974625,
+      "p90Penalty": 0.19243375,
+      "medianMs": 5.519082999999682,
+      "p95Ms": 6.731083000000581
+    },
+    {
+      "level": 5,
+      "boards": 1000,
+      "failures": 0,
+      "violations": 0,
+      "distinct": 1000,
+      "medianPenalty": 0.0287075,
+      "p90Penalty": 0.0421025,
+      "medianMs": 63.95891699999629,
+      "p95Ms": 75.91145899999538
+    }
+  ]
+}
