@@ -27,3 +27,5 @@
 }
 @media(max-width:650px) and (orientation:landscape){.compact-shell .board-surface>.board-graphic{width:min(100%,340px)}}
 @media(min-width:651px){.compact-shell .board-surface>.board-graphic{width:min(100%,max(300px,calc(100dvh - 330px)));margin:auto}}
+.balance-shortcuts{display:flex;align-items:center;justify-content:flex-end;gap:10px}.balanced-reset{font-size:11px;padding:6px 8px;white-space:nowrap}.compact-shell .control-top{flex-wrap:wrap;gap:4px}
+@media(max-width:650px){.balance-shortcuts{gap:8px}.compact-shell .board-surface>.board-graphic{width:min(100%,max(260px,calc(100dvh - 292px)))}.compact-shell .empty-board{height:max(260px,calc(100dvh - 292px))}}

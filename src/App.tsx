@@ -143,7 +143,7 @@ export default function App(){
         </>:<div className="empty-board" aria-busy={busy}><span className={busy?'island-spinner':'empty-symbol'} aria-hidden="true">⬡</span><h2>{busy?'Finding your next island…':linkError?'Choose how to continue':'Ready for a new setup?'}</h2><p>{busy?'Checking the pieces and your active restrictions.':'Choose your preferences, then generate a board.'}</p></div>}
       </section>
       <section className="controls" aria-label="Generation settings">
-        <div className="kicker">Make it your game</div><div className="control-top"><h2><label htmlFor="balance">Choose balance</label></h2><span className="selected-level">{LEVELS[draft.level-1]}</span></div>
+        <div className="kicker">Make it your game</div><div className="control-top"><h2><label htmlFor="balance">Choose balance</label></h2><div className="balance-shortcuts"><span className="selected-level">{LEVELS[draft.level-1]}</span><button className="utility balanced-reset" disabled={busy||settingsEqual(draft,DEFAULT_SETTINGS)} onClick={()=>{setDraft(structuredClone(DEFAULT_SETTINGS));setError('');setMessage('Balanced defaults restored. Generate to apply.');}}>Reset to Balanced</button></div></div>
         <input id="balance" className="balance-slider" type="range" min="1" max="5" step="1" value={draft.level} aria-valuetext={LEVELS[draft.level-1]} style={{'--slider-progress':`${(draft.level-1)*25}%`} as React.CSSProperties} onChange={e=>setDraft({...draft,level:Number(e.target.value) as Level})}/>
         <div className="levels" aria-hidden="true"><span>Random</span><span>Balanced</span><span>Very balanced</span></div>
         <p className="balance-description desktop-description">{descriptions[draft.level-1]}</p>
