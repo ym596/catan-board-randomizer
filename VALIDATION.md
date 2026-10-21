@@ -50,6 +50,22 @@ Checked in the Codex in-app browser against the running local application:
 
 ## Remaining release gates
 
+### Local compact-layout revision — visual review approved
+
+The compact phone layout is implemented and approved for commit and publication. The user approved the revised phone/desktop interface on October 21, 2026; corresponding interface requirements are recorded in `SPEC.md`.
+
+- Production build and all fourteen existing tests pass.
+- In-app browser measurements: no page scrolling or horizontal overflow at 360 × 560, 390 × 664, 402 × 740, and 430 × 740 CSS pixels. Full board and Generate remain visible together. Landscape 568 × 320 permits vertical scrolling without horizontal overflow.
+- Pending slider changes preserve the displayed board. Advanced choices survive closing/reopening; Generate in Advanced closes the panel and applies the centered-desert override. Repeated generation works.
+- Advanced content scrolls internally while its Close and Generate controls remain available.
+- Optional legend includes terrain names, port guidance, and connector guidance. Escape restores focus to its opener, and Tab stays inside the panel.
+- More contains sharing, PNG export, selectable link field, board text, current-board balance details, and assembly instructions. Link creation and PNG download succeeded.
+- Enlarge opens with its legend, zoom reaches 125%, and Escape returns to the opener. Desktop layout remains board beside controls.
+- Local screenshots: ignored `artifacts/compact-phone.png`, `artifacts/compact-advanced.png`, and `artifacts/compact-desktop.png`.
+- Physical iPhone/Android testing (including Safari bars, safe areas, pinch zoom, and larger text) remains unperformed. Existing core tests cover zero-budget generation failure; the revised browser failure controls have not been exercised with an induced worker/search failure.
+
+### Broader release checks
+
 - Actual iPhone Safari and Android Chrome testing, including pinch zoom, download behavior, lower-end-device generation latency, and accessibility.
 - Desktop Safari, Firefox, and Edge checks.
 - Formal contrast/screen-reader review and the planned three-person physical setup test.
@@ -57,3 +73,5 @@ Checked in the Codex in-app browser against the running local application:
 - Hosting selected: GitHub Pages. The user authorized committing, pushing, and publishing an initial beta on October 21, 2026. The manual Pages workflow runs tests and a production build before deployment.
 
 The initial beta is authorized for commit/push and publication. The remaining checks above apply before treating it as a fully validated release.
+
+Compact-layout follow-up: removed the persistent desktop legend and aligned the three reference labels across the full slider width. Desktop 1280 × 800 and phone 360 × 560 checks passed; Show legend still opens all labels and setup guidance. Production build passed. The user subsequently authorized committing and publishing these changes.

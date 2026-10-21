@@ -1,6 +1,6 @@
 # Catan Board Randomizer — Product Specification
 
-Status: approved requirements baseline; first local v1 implementation is available for review.
+Status: approved requirements baseline; initial beta published. Compact phone and desktop interface approved October 21, 2026; commit and publication of this revision authorized.
 
 This specification records the decisions made in the project conversation through October 20, 2026. The user subsequently authorized building the first local working version and approved installing its project dependencies. On October 21, 2026, the user authorized committing, pushing, and publishing an initial beta using GitHub Pages. Publication uses a manual GitHub Actions workflow, separately from ordinary pushes. Provisional parameters and outstanding release gates below remain in effect for a fully validated release.
 
@@ -14,7 +14,7 @@ Help new and casual Catan groups generate a varied base-game board and accuratel
 - Phone-first design; usable phone and desktop layouts at launch.
 - Top-down, two-dimensional board.
 - Terrain and number generation inside a fixed six-piece sea frame with fixed ports.
-- One five-position balance slider; optional, initially collapsed Advanced settings.
+- One five-position balance slider; optional Advanced settings dialog.
 - Image download, shareable board links, and restoration of the last board in the same browser.
 - Full board with short assembly help, plus an enlarged board view with zoom.
 - Internet is required to open the site. Once loaded, generation and image export operate locally. Offline reopening is not required.
@@ -159,7 +159,7 @@ An in-memory Python feasibility check sampled 200,000 random layouts and found e
 ## 7. Presentation and assembly
 
 - Warm off-white background, dark readable text, restrained controls.
-- Original simplified resource symbols and distinct terrain colors. Keep resource names outside the hexes in a shared, always-visible legend below the board to reduce clutter. The legend pairs each symbol/color with Wood, Wheat, Wool, Brick, Ore, or Desert. Do not rely on color alone or reuse proprietary rulebook art as website assets.
+- Original simplified resource symbols and distinct terrain colors. Keep resource names outside the hexes in a shared legend opened with Show legend on both phone and desktop to reduce clutter. Keep the legend visible in the enlarged view and PNG export. The legend pairs each symbol/color with Wood, Wheat, Wool, Brick, Ore, or Desert. Do not rely on color alone or reuse proprietary rulebook art as website assets.
 - Large, high-contrast circular number tokens, red 6/8 styling, and probability dots.
 - Distinct desert symbol and sandy appearance, identified by name in the shared legend; no token. Include a small robber starting-position indicator without obscuring the desert symbol.
 - Each resource-specific port repeats its terrain's symbol and color with a clear 2:1 ratio. Generic 3:1 ports use a distinct dark badge and exchange symbol. Keep the ratio legible; do not repeat resource names inside port badges.
@@ -168,9 +168,11 @@ An in-memory Python feasibility check sampled 200,000 random layouts and found e
 - Place matching numbered ends on opposite sides of each frame join so users can identify which physical pieces connect. Use square labels visually distinct from circular number tokens and port ratios. Labels may sit just outside the outline with leaders to avoid overlapping port badges. Use the rulebook-checked connector/port topology; physical puzzle tabs may be simplified as schematic seams.
 - Keep frame and orientation consistent across generations.
 - Hint: “Match the numbered ends to assemble the frame.”
-- Phone: board first, then controls; board uses available width. Desktop: board left, controls right.
-- Show the applied level with the board. Show pending selection and the apply notice beside the controls.
-- Include the five-position slider, initially collapsed Advanced settings, Generate board, Copy link, Download image, optional Balance details, and short assembly help.
+- Phone: fit the complete board, slider, Advanced settings, and Generate together without scrolling at default text size on portrait viewports from 360 × 560 CSS pixels upward. Size the board using available width and dynamic viewport height, accounting for browser bars and safe areas. Reduce repeated headings and spacing. Allow vertical scrolling on shorter/landscape screens or enlarged text rather than clipping content. Desktop: board left, controls right.
+- Show the applied level with the board separately from the slider’s selected level. Reserve a compact status line for Changes pending so edits do not shift the layout. Keep Random, Balanced, and Very balanced reference labels aligned with the slider’s left end, midpoint, and right end; all five positions remain available.
+- Advanced settings opens a dialog on both phone and desktop with all five toggles, custom-choice indicators, reset, Close, and Generate. Closing retains pending choices. Generate snapshots the request, closes the dialog, and keeps the previous board visible while processing; prevent duplicate requests. Failure preserves board/settings and offers Retry or Adjust settings.
+- Show legend opens terrain labels and port/connector guidance. More opens Copy link, Download image, selectable link fallback, board-as-text, current-board balance details, and assembly help. Do not persist a legend below the normal board on either screen size.
+- Keep only one panel open at a time. Panel contents scroll internally; Close and the Advanced Generate action remain available. Trap keyboard focus, support Escape, restore focus to the opener, and preserve at least 44-pixel touch targets. An explicitly opened panel may cover the board.
 - Balance details describe production potential by resource and the applied restrictions. Do not show a fairness percentage or player-win predictions.
 - Enlarged board supports touch zoom, explicit zoom controls, keyboard access, and Escape to close; preserve setup and orientation.
 
@@ -199,7 +201,7 @@ Export a complete opaque white-background image at 2,400 pixels wide, containing
 - Browser Web Worker for bounded generation.
 - Local browser storage for last-board restoration.
 - Versioned self-contained layout links, independent of generator seeds and server storage.
-- Local implementation uses React, TypeScript, Vite, and Vitest with exact resolved versions in `pnpm-lock.yaml`. Hosting and deployment remain unchosen and unauthorized.
+- Local implementation uses React, TypeScript, Vite, and Vitest with exact resolved versions in `pnpm-lock.yaml`. The initial beta is hosted on GitHub Pages using a manual test/build/deploy workflow; the approved compact-layout commit and publication of this revision authorized.
 
 ## 10. Accessibility and acceptance criteria
 
@@ -219,7 +221,7 @@ Target WCAG 2.2 AA. Support keyboard operation, visible focus, screen-reader sta
 ### Visual and accessibility acceptance
 
 - At 360 CSS pixels wide, no page-level horizontal overflow.
-- Terrain symbols are identifiable through the always-visible labeled legend; hexes do not contain repeated resource names.
+- Terrain symbols are identifiable through the on-demand labeled legend on phone and desktop; enlarged views and PNG exports retain a visible legend. Hexes do not contain repeated resource names.
 - Terrain and corresponding 2:1 ports use consistent symbols/colors; generic ports are visibly distinct. Port ratios and frame connector numbers remain distinguishable from terrain number tokens.
 - Each port's two usable coastal corners are unambiguous; piers and markers do not obscure terrain or number tokens.
 - All six frame pieces can be visually traced from their complete outlines; matching connector labels appear on either side of each join.
