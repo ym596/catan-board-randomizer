@@ -39,6 +39,15 @@ Checked in the Codex in-app browser against the running local application:
 - Working phone and desktop/pending screenshots retained locally in ignored `artifacts/`.
 - Production build smoke-tested separately: initial Balanced generation and Very balanced generation work using the compiled worker.
 
+## Published beta smoke check — October 21, 2026
+
+- Published https://ym596.github.io/catan-board-randomizer/ from application commit `48ebcb6` using the manual GitHub Pages workflow.
+- GitHub Actions run 39543214628 completed successfully: locked dependency installation, fourteen tests, production build, and deployment.
+- On the public site, initial Balanced generation, pending settings, and Very balanced generation worked.
+- A public share link restored the exact rendered board, including after a full reload.
+- Hosted PNG download completed successfully. The live page was visually inspected; screenshot retained locally in ignored `artifacts/published-beta.png`.
+- These hosted checks use the Codex in-app browser; physical-phone and other-browser checks below remain outstanding.
+
 ## Remaining release gates
 
 - Actual iPhone Safari and Android Chrome testing, including pinch zoom, download behavior, lower-end-device generation latency, and accessibility.
